@@ -40,7 +40,7 @@ for {set i $start } {$i <= $end} {incr i 1} {
   set subsurface_storage [pfsubsurfacestorage $mask $porosity $pressure $saturation $specific_storage]
   pfsave $subsurface_storage -silo "subsurface_storage.$i.silo"
 
-  if { $i > $start}{
+  if { $i > $start} {
      set surface_runoff [pfsurfacerunoff $top $slope_x $slope_y $mannings $pressure]
      pfsave $surface_runoff -silo "surface_runoff.$i.silo"
   }
